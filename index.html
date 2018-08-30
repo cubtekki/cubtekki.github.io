@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Homework 2 part 1 document.write statements.">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <title>HW02 Part 01</title>
+    <!--All CSS Styling-->
+    <style>
+      body {
+        max-width: 1000px;
+        margin: auto;
+        font-family: 'Roboto Condensed', sans-serif;
+
+      }
+
+      h1, h2 {
+        text-align: center;
+      }
+
+      header {
+        padding: 25px;
+        background-color: lightblue;
+        border: black solid 3px;
+      }
+
+      a {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      nav {
+        margin: 8px 0px 3px 0px;
+      }
+
+      nav a:hover{
+        color: deepskyblue;
+      }
+
+      #pair1 {
+        color: red;
+        font-family:  times new roman, serif;
+      }
+
+      #pair2 {
+        color: blue;
+        font-family: Arial;
+      }
+
+      #pair3 {
+        color: green;
+        font-family: Impact;
+      }
+      #pair1 {
+        margin-left: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--Link to return to HW2 main page-->
+    <nav>
+      <a href="hw_02.html">&lArr; Back to HW02 Index</a>
+    </nav>
+    <!--Main title and specific title of JS example-->
+    <header>
+      <h1>CNIT 133 Homework 2 - Basic Operations</h1>
+      <h2>Part 1 - document.write statements</h2>
+    </header>
+    <br>
+    <!--document.write statement that spits out HTML text in stylized pairs-->
+    <script>
+      document.write("<strong><span id='pair1'>ab</span></strong>" + "<strong><span id='pair2'> 12</span></strong>" + "<strong><em><span id='pair3'> 34</span></em></strong>");
+    </script>
+  </body>
+</html>
