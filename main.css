@@ -1,0 +1,88 @@
+/* Importing Fonts Raleway and Roboto Slab */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:700');
+
+/* 
+Assets used for page creation:
+
+Lorem Ipsum:
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+Colors:
+
+*/
+
+/* Clear default margin, padding and border to control sizing */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+/* Wrapper for entire page, defines grid layout*/
+.page {
+    grid-template-columns: 100%;
+}
+
+/* Header container */
+header#main-header {
+    display: flex;
+    justify-content: center;
+    max-height: 10.8em;
+    grid-column: 0/1;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+/* All h1's in the header container */
+#main-header h1 {
+    position: relative;
+    top: -7rem;
+    font: bold 18rem 'Roboto Slab', serif;
+    white-space: nowrap;
+}
+
+/* Desktop specific text. **Will be replaced by jQuery** */
+#desktop-heading {
+    display: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 4% 8%;
+    /* justify-items: center;
+    grid-column-gap: 5%; */
+}
+
+section#introduction {
+    grid-column: 0/1;
+}
+
+/* Paragraph styling */
+p {
+    font: 1rem 'Raleway', sans-serif;
+    text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+
+    header#main-header {
+        justify-content: flex-start;
+    }
+
+    #mobile-heading {
+        display: none;
+    }
+
+    h1#desktop-heading {
+        top: -6rem;
+        display: initial;
+        font-size: 16rem;
+    }
+
+}
