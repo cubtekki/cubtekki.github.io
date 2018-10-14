@@ -25,6 +25,9 @@ body {
 
 /* Wrapper for entire page, defines grid layout*/
 .page {
+    max-width: 1600px;
+    margin: auto;
+    display: grid;
     grid-template-columns: 100%;
 }
 
@@ -32,9 +35,10 @@ body {
 header#main-header {
     display: flex;
     justify-content: center;
-    max-height: 10.8em;
+    max-height: 10.8rem;
     grid-column: 0/1;
     background-color: lightblue;
+    border-radius: 0 0 0.4rem 0.4rem;
     overflow: hidden;
 }
 
