@@ -6,18 +6,19 @@ Assets used for page creation:
 
 Colors:
 #6fc0db blue
-
-
 */
 
 /* Clear default margin, padding and border to control sizing */
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+
+    /* for debugging layout issues enable this border below. */
+    /* border: 1px solid red;  */
+    
     box-sizing: border-box;
 }
-
+/* total page width and base styling */
 body {
     width: 100%;
     font: .8em 'Raleway', sans-serif;
@@ -25,7 +26,7 @@ body {
 
 /* Wrapper for entire page, defines grid layout*/
 .page {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -46,37 +47,36 @@ header#main-header {
     top: -5.8rem;
     font: bold 15rem 'Roboto Slab', serif;
     white-space: nowrap;
-    /* text-overflow: clip; */
 }
 
 /* Desktop specific text. **Will be replaced by jQuery** */
 #desktop-heading {
     display: none;
 }
-
+/* content that's not the header */
 main {
     display: flex;
     justify-content: center;
     width: 85%;
-    margin: 0 auto;
-    /* justify-items: center;
-    grid-column-gap: 5%; */
+    margin: 2em auto;
 }
-
+/* disable sidebar visibility until size is 1024px */
 nav {
     display: none;
     }
 
-
+/* initial large job description text */
 #introduction > h3 {
-        padding: 2em 2em 0;
+        margin: auto;
+        padding: 0 2em 0;
         font-size: 1.3em;
+        max-width: 30em;
     }
 
     /* Paragraph styling */
-p {
-    text-align: justify;
-    padding: 2em 0 0;
+#introduction p {
+    margin: 2em auto;
+    max-width: 45em;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -98,17 +98,23 @@ p {
     }
 
     main {
-        max-width: 50em;
+        width: 95%;
     }
 
     nav {
         display: initial;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        list-style-type: square;
         width: 30%;
-        padding-right: 1.5em;
+        padding: 1.5em;
     }
 
     ul {
-        padding: 1em;
+        margin: 1em;
+    }
+
+    li {
+        margin: 0.5em 0;
     }
 
     #introduction {
