@@ -12,16 +12,20 @@ Colors:
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
     /* for debugging layout issues enable this border below. */
-    /* border: 1px solid red;  */
-    
-    box-sizing: border-box;
+    border: 1px solid red;
 }
+
 /* total page width and base styling */
 body {
     width: 100%;
-    font: .8em 'Raleway', sans-serif;
+    font: .7em 'Raleway', sans-serif;
+}
+
+p {
+    max-width: 45em;
 }
 
 /* Wrapper for entire page, defines grid layout*/
@@ -33,8 +37,7 @@ body {
 /* Header container */
 #main-header {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
-    display: flex;
-    justify-content: center;
+    text-align: center;
     height: 9rem;
     background-color: #6fc0db;
     overflow: hidden;
@@ -44,43 +47,73 @@ body {
 /* All h1's in the header container */
 #main-header h1 {
     position: relative;
-    top: -5.8rem;
-    font: bold 15rem 'Roboto Slab', serif;
+    top: -5.3rem;
+    font: bold 14rem 'Roboto Slab', serif;
     white-space: nowrap;
 }
 
-/* Desktop specific text. **Will be replaced by jQuery** */
+/* Desktop h1 header element hidden until @media query */
 #desktop-heading {
     display: none;
 }
+
 /* content that's not the header */
 main {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 95%;
     margin: 2em auto;
 }
+
 /* disable sidebar visibility until size is 1024px */
 nav {
     display: none;
-    }
+}
+
+#top-box {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Paragraph styling for top section */
+#top-box #introduction p {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#middle-box {
+    margin: 0 auto;
+    padding: 2em 0;
+    /* width: 80%; */
+}
+
+.post-title {
+    padding: 1em;
+}
+
+/* Paragraph styling for middle section */
+#middle-box p{
+    padding: 1em;
+    margin: 0 auto;
+}
 
 /* initial large job description text */
-#introduction > h3 {
+#introduction > h2 {
         margin: auto;
         padding: 2em;
         font-size: 1.3em;
-        max-width: 30em;
+        max-width: 32em;
+}
+    
+/* For tablet screen res */
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    body {
+        font-size: 1.1em;
     }
-
-    /* Paragraph styling */
-#introduction p {
-    margin: 0 auto;
-    padding: 1.5em;
-    max-width: 45em;
 }
 
+/* For desktop/laptop/ipad-pro screen res */
 @media only screen and (min-width: 1024px) {
 
     body {
@@ -88,7 +121,7 @@ nav {
     }
 
     header#main-header {
-        justify-content: flex-start;
+        text-align: initial;
     }
 
     #mobile-heading {
@@ -99,19 +132,15 @@ nav {
         display: initial;
     }
 
-    main {
-        width: 95%;
-    }
-
     nav {
         display: initial;
         border: 1px solid rgba(0, 0, 0, 0.4);
-        list-style-type: square;
-        width: 30%;
-        padding: 1.5em;
+        width: 25%;
+        padding: 1em;
     }
-
+    
     ul {
+        list-style-type: square;
         margin: 1em;
     }
 
@@ -120,7 +149,7 @@ nav {
     }
 
     #introduction {
-        width: 70%;
+        width: 75%;
+        padding: 1em;
     }
-
 }
