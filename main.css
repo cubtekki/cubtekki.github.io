@@ -5,6 +5,13 @@
 Assets used for page creation:
 
 Colors:
+HEX: #55ACEE blue
+HEX: #292F33 dark gray
+HEX: #66757F med gray
+HEX: #CCD6DD light gray
+HEX: #E1E8ED lighter
+HEX: #FFFFFF white
+
 #6fc0db blue
 */
 
@@ -15,7 +22,7 @@ Colors:
     box-sizing: border-box;
 
     /* for debugging layout issues enable this border below. */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* total page width and base styling */
@@ -39,7 +46,8 @@ p {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
     text-align: center;
     height: 9rem;
-    background-color: #6fc0db;
+    background-color: #3F69AA;
+    color: #E1E8ED;
     overflow: hidden;
     box-shadow: 0 .1rem .5rem rgb(45, 45, 45);
 }
@@ -90,6 +98,9 @@ nav {
 
 .post-title {
     padding: 1em;
+    background-color: #CCD6DD;
+    /* color: white; */
+    border-radius: 0.4em;
 }
 
 /* Paragraph styling for middle section */
@@ -100,6 +111,9 @@ nav {
 
 /* initial large job description text */
 #introduction > h2 {
+    color: white;
+    background-color: #292F33;
+    border-radius: 0.4em;
         margin: auto;
         padding: 2em;
         font-size: 1.3em;
@@ -135,6 +149,7 @@ nav {
     nav {
         display: initial;
         border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 0.4em;
         width: 25%;
         padding: 1em;
     }
