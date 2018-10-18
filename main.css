@@ -45,17 +45,17 @@ p {
 #main-header {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
     text-align: center;
-    height: 9rem;
-    background-color: #3F69AA;
-    color: #E1E8ED;
+    height: 9.1rem;
+    background-color: #6F9FD8;
+    color: white;
     overflow: hidden;
-    box-shadow: 0 .1rem .5rem rgb(45, 45, 45);
+    /* box-shadow: 0 0 .7rem rgb(45, 45, 45); */
 }
 
 /* All h1's in the header container */
 #main-header h1 {
     position: relative;
-    top: -5.3rem;
+    top: -5.1rem;
     font: bold 14rem 'Roboto Slab', serif;
     white-space: nowrap;
 }
@@ -90,14 +90,19 @@ nav {
     padding: 1em;
 }
 
+hr {
+    margin: 1.5em auto;
+    width: 70%;
+    border: 0.5px solid rgba(111, 158, 216, 0.75);
+}
+
 #middle-box {
     margin: 0 auto;
-    padding: 2em 0;
-    /* width: 80%; */
 }
 
 .post-title {
     padding: 1em;
+    margin-top: 1em;
     background-color: #CCD6DD;
     /* color: white; */
     border-radius: 0.4em;
@@ -112,7 +117,7 @@ nav {
 /* initial large job description text */
 #introduction > h2 {
     color: white;
-    background-color: #292F33;
+    background-color: #66757F;
     border-radius: 0.4em;
         margin: auto;
         padding: 2em;
