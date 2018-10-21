@@ -97,14 +97,14 @@ nav {
 
 /* divider between content and intro/nav */
 hr {
-    width: 95%;
+    width: 75%;
     margin: 1.5em auto;
     border-style: solid;
     border-color: rgba(111, 158, 216, 0.75);
 }
 
 #content-divider {
-    width: 75%;
+    width: 25%;
 }
 
 /* content container */
