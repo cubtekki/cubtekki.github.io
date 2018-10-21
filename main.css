@@ -4,22 +4,25 @@
 /* 
 Assets used for page creation:
 
-Colors:
-HEX: #55ACEE blue
-HEX: #292F33 dark gray
-HEX: #66757F med gray
-HEX: #CCD6DD light gray
-HEX: #E1E8ED lighter
-HEX: #FFFFFF white
-
-#6fc0db blue
 */
+
+/* color pallet variables */
+:root {
+    --altBlue: #6fc0db;
+    --blue: #55acee;
+    --darkGray: #292f33;
+    --medGray: #66757f;
+    --lightGray: #ccd6dd;
+    --lighterGray: #e1e8ed;
+}
 
 /* Clear default margin, padding and border to control sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* set all elements to transparent so the jQuery script can reveal them stylishly */
+    opacity: 0;
 
     /* for debugging layout issues enable this border below. */
     /* border: 1px solid red; */
@@ -31,6 +34,7 @@ body {
     font: .7em 'Raleway', sans-serif;
 }
 
+/* props for all paragraph elements */
 p {
     max-width: 45em;
 }
@@ -79,6 +83,7 @@ nav {
     display: none;
 }
 
+/* includes sidebar nav section and intro content */
 #top-box {
     display: flex;
     margin: 0 auto;
@@ -90,22 +95,30 @@ nav {
     padding: 1em;
 }
 
+/* divider between content and intro/nav */
 hr {
+    width: 95%;
     margin: 1.5em auto;
-    width: 70%;
-    border: 0.5px solid rgba(111, 158, 216, 0.75);
+    border-style: solid;
+    border-color: rgba(111, 158, 216, 0.75);
 }
 
+#content-divider {
+    width: 75%;
+}
+
+/* content container */
 #middle-box {
     margin: 0 auto;
 }
 
+/* title styling for all content posts */
 .post-title {
     padding: 1em;
     margin-top: 1em;
     background-color: #CCD6DD;
     /* color: white; */
-    border-radius: 0.4em;
+    border-radius: 0.5em;
 }
 
 /* Paragraph styling for middle section */
@@ -118,11 +131,59 @@ hr {
 #introduction > h2 {
     color: white;
     background-color: #66757F;
-    border-radius: 0.4em;
+    border-radius: 0.5em;
         margin: auto;
         padding: 2em;
         font-size: 1.3em;
         max-width: 32em;
+}
+
+/* general bottom footer styling */
+#branding {
+    display: flex;
+    justify-content: space-around;
+    height: 8em;
+    margin-bottom: 0.5em;
+}
+
+#bottom-photo {
+    width: 50%;
+}
+
+/* bottom image formatting */
+#bottom-photo img {
+    display: block;
+    transform: scaleX(-1);
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0.5em;
+}
+
+/* right side links div styling */
+#footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    /* margin: 0 2em; */
+}
+
+/* test to direct users to links */
+#footer-links h4 {
+    text-align: center;
+}
+
+/* spacing out the links horizontally */
+#links ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* styling the links themselves */
+#links li {
+    list-style-type: none;
+     margin: 1em;
 }
     
 /* For tablet screen res */
@@ -154,7 +215,7 @@ hr {
     nav {
         display: initial;
         border: 1px solid rgba(0, 0, 0, 0.4);
-        border-radius: 0.4em;
+        border-radius: 0.5em;
         width: 25%;
         padding: 1em;
     }
