@@ -144,6 +144,10 @@ hr {
     text-align: center;
 }
 
+#introduction i {
+    margin: 0 1em 0 1em;
+}
+
 /* general bottom footer styling */
 #branding {
     display: flex;
