@@ -1,0 +1,242 @@
+/* Importing Fonts Raleway and Roboto Slab */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:700');
+
+/* 
+Assets used for page creation:
+
+*/
+
+/* color pallet variables */
+:root {
+    --altBlue: #6fc0db;
+    --blue: #55acee;
+    --darkGray: #292f33;
+    --medGray: #66757f;
+    --lightGray: #ccd6dd;
+    --lighterGray: #e1e8ed;
+}
+
+/* Clear default margin, padding and border to control sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* set all elements to transparent so the jQuery script can reveal them stylishly */
+    opacity: 0;
+
+    /* for debugging layout issues enable this border below. */
+    /* border: 1px solid red; */
+}
+
+/* total page width and base styling */
+body {
+    width: 100%;
+    font: .7em 'Raleway', sans-serif;
+}
+
+/* props for all paragraph elements */
+p {
+    max-width: 45em;
+}
+
+/* Wrapper for entire page, defines grid layout*/
+.page {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Header container */
+#main-header {
+    opacity: 0; /* setting opacity to 0 so animation can fade it in */
+    text-align: center;
+    height: 9.1rem;
+    background-color: #6F9FD8;
+    color: white;
+    overflow: hidden;
+    /* box-shadow: 0 0 .7rem rgb(45, 45, 45); */
+}
+
+/* All h1's in the header container */
+#main-header h1 {
+    position: relative;
+    top: -5.1rem;
+    font: bold 14rem 'Roboto Slab', serif;
+    white-space: nowrap;
+}
+
+/* Desktop h1 header element hidden until @media query */
+#desktop-heading {
+    display: none;
+}
+
+/* content that's not the header */
+main {
+    opacity: 0; /* setting opacity to 0 so animation can fade it in */
+    /* display: flex; */
+    flex-direction: column;
+    width: 95%;
+    margin: 2em auto; 
+}
+
+/* disable sidebar visibility until size is 1024px */
+nav {
+    display: none;
+}
+
+/* Intro heading box spacing */
+#introduction {
+    margin: auto;
+}
+
+/* includes sidebar nav section and intro content */
+#top-box {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Paragraph styling for top section */
+#top-box #introduction p {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+/* divider between content and intro/nav */
+hr {
+    width: 75%;
+    margin: 1.5em auto;
+    border-style: solid;
+    border-color: rgba(111, 158, 216, 0.75);
+}
+
+#content-divider {
+    width: 25%;
+}
+
+/* content container */
+#middle-box {
+    margin: 0 auto;
+}
+
+/* title styling for all content posts */
+.post-title {
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #CCD6DD;
+    /* color: white; */
+    border-radius: 0.5em;
+}
+
+/* Paragraph styling for middle section */
+#middle-box p{
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/* initial large job description text */
+#introduction > h2 {
+    color: white;
+    background-color: #66757F;
+    border-radius: 0.5em;
+    margin: auto;
+    padding: 2em;
+    font-size: 1.3em;
+    max-width: 100%;
+    text-align: center;
+}
+
+/* general bottom footer styling */
+#branding {
+    display: flex;
+    justify-content: space-around;
+    height: 8em;
+    margin-bottom: 0.5em;
+}
+
+#bottom-photo {
+    width: 50%;
+}
+
+/* bottom image formatting */
+#bottom-photo img {
+    display: block;
+    transform: scaleX(-1);
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 0.5em;
+}
+
+/* right side links div styling */
+#footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    /* margin: 0 2em; */
+}
+
+/* test to direct users to links */
+#footer-links h4 {
+    text-align: center;
+}
+
+/* spacing out the links horizontally */
+#links ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* styling the links themselves */
+#links li {
+    list-style-type: none;
+     margin: 1em;
+}
+    
+/* For tablet screen res */
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    body {
+        font-size: 1.1em;
+    }
+}
+
+/* For desktop/laptop/ipad-pro screen res */
+@media only screen and (min-width: 1024px) {
+
+    body {
+        font-size: 1em;
+    }
+
+    header#main-header {
+        text-align: initial;
+    }
+
+    #mobile-heading {
+        display: none;
+    }
+
+    h1#desktop-heading {
+        display: initial;
+    }
+
+    nav {
+        display: initial;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 0.5em;
+        width: 25%;
+        padding: 1em;
+    }
+    
+    ul {
+        list-style-type: square;
+        margin: 1em;
+    }
+
+    li {
+        margin: 0.5em 0;
+    }
+
+    #introduction {
+        width: 75%;
+        padding: 1em;
+    }
+}
