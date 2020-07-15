@@ -9,7 +9,7 @@ Assets used for page creation:
 /* color pallet variables */
 :root {
     --altBlue: #6fc0db;
-    --blue: #55acee;
+    --blue: #6F9FD8;
     --darkGray: #292f33;
     --medGray: #66757f;
     --lightGray: #ccd6dd;
@@ -153,7 +153,7 @@ hr {
 }
 
 #bottom-photo {
-    width: 50%;
+    width: 33%;
 }
 
 /* bottom image formatting */
@@ -184,12 +184,24 @@ hr {
 #links ul {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 /* styling the links themselves */
 #links li {
     list-style-type: none;
-     margin: 1em;
+    margin: 1em;
+}
+/* link colors */
+a:visited {
+    color: var(--altBlue);
+}
+a:link {
+    color: var(--blue);
+    text-decoration: initial;
+}
+a:hover {
+    color: var(--darkGray);
 }
     
 /* For tablet screen res */
