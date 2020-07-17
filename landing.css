@@ -1,6 +1,5 @@
 /* Importing Fonts Raleway and Roboto Slab */
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab:700');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto+Slab:wght@900&family=Roboto:wght@300;500;700&display=swap');
 /* 
 Assets used for page creation:
 
@@ -9,6 +8,7 @@ Assets used for page creation:
 /* color pallet variables */
 :root {
     --altBlue: #6fc0db;
+    --altBlueTrans: #6fc0dbaf;
     --blue: #6F9FD8;
     --darkGray: #292f33;
     --medGray: #66757f;
@@ -28,10 +28,15 @@ Assets used for page creation:
     /* border: 1px solid red; */
 }
 
+html {
+    height: 100%;
+}
+
 /* total page width and base styling */
 body {
+    height: 100%;
     width: 100%;
-    font: .7em 'Raleway', sans-serif;
+    font: .7em 'Open Sans', sans-serif;
 }
 
 /* props for all paragraph elements */
@@ -42,6 +47,8 @@ p {
 /* Wrapper for entire page, defines grid layout*/
 .page {
     max-width: 1400px;
+    height: 100%;
+    min-height: 700px;
     margin: auto;
 }
 
@@ -49,19 +56,20 @@ p {
 #main-header {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
     text-align: center;
-    height: 9.1rem;
+    height: 10rem;
     background-color: #6F9FD8;
     color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* box-shadow: 0 0 .7rem rgb(45, 45, 45); */
 }
 
 /* All h1's in the header container */
 #main-header h1 {
     position: relative;
-    top: -5.1rem;
-    font: bold 14rem 'Roboto Slab', serif;
+    top: -4rem;
+    font: 300 13rem 'Roboto Slab', serif;
     white-space: nowrap;
+    text-shadow: .4rem 0.2rem .5rem rgba(0, 0 , 0, 0.5);
 }
 
 /* Desktop h1 header element hidden until @media query */
@@ -72,7 +80,7 @@ p {
 /* content that's not the header */
 main {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     width: 95%;
     margin: 2em auto; 
@@ -102,10 +110,12 @@ nav {
 
 /* divider between content and intro/nav */
 hr {
+    position: relative;
+    background-color: var(--lightGray);
     width: 75%;
+    height:.2rem;
     margin: 1.5em auto;
-    border-style: solid;
-    border-color: rgba(111, 158, 216, 0.75);
+    border-width: 0;
 }
 
 #content-divider {
@@ -134,26 +144,54 @@ hr {
 
 /* initial large job description text */
 #introduction > h2 {
-    color: white;
-    background-color: #66757F;
-    border-radius: 0.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--darkGray);
+    /* background-color: var(--blue); */
+    /* border-radius: 0.5em; */
     margin: auto;
-    padding: 2em;
-    font-size: 1.4em;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    max-width: 100%;
+    text-align: center;
+}
+.emphasize {
+    color: var(--blue);
+    font-weight: bold;
+}
+/* contruction site begin */
+#contruction {
+    margin:5rem auto 5rem auto;
+}
+
+#contruction > h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: var(--darkGray);
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.7em;
     max-width: 100%;
     text-align: center;
 }
 
-#introduction i {
-    margin: 0 1em 0 1em;
+#contruction p {
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* general bottom footer styling */
+#bottomContent {
+    position: absolute;
+    bottom: 0;
+}
+
 #branding {
     display: flex;
     justify-content: space-around;
     height: 8em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 #bottom-photo {
