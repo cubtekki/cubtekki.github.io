@@ -66,8 +66,8 @@ p {
 /* All h1's in the header container */
 #main-header h1 {
     position: relative;
-    top: -4rem;
-    font: 300 13rem 'Roboto Slab', serif;
+    top: -2.5rem;
+    font: 300 12rem 'Roboto Slab', serif;
     white-space: nowrap;
     text-shadow: .4rem 0.2rem .5rem rgba(0, 0 , 0, 0.5);
 }
