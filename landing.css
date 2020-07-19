@@ -37,6 +37,7 @@ body {
     /* height: 100%;
     width: 100%; */
     font: 1rem 'Open Sans', sans-serif;
+    background-color: ivory;
 }
 
 /* props for all paragraph elements */
@@ -56,7 +57,9 @@ p {
 #main-header {
     opacity: 0; /* setting opacity to 0 so animation can fade it in */
     text-align: center;
+    margin: auto;
     height: 10rem;
+    width: 100%;
     background-color: #6F9FD8;
     color: white;
     /* overflow: hidden; */
@@ -70,7 +73,7 @@ p {
     padding: 0 0.5rem;
     font: 300 12rem 'Roboto Slab', serif;
     white-space: nowrap;
-    text-shadow: .4rem 0.2rem .5rem rgba(0, 0 , 0, 0.5);
+    text-shadow: .4rem 0.2rem .2rem rgba(0, 0 , 0, 0.3);
 }
 
 /* Desktop h1 header element hidden until @media query */
@@ -218,14 +221,16 @@ hr {
 #footer-links {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 66%;
     height: 100%;
+    padding: .5rem;
 }
 
 /* test to direct users to links */
 #footer-links h4 {
     text-align: center;
+    padding: .3rem;
 }
 
 /* spacing out the links horizontally */
@@ -233,13 +238,13 @@ hr {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 0 1rem;
+    margin: 0 .1rem;
 }
 
 /* styling the links themselves */
 #links li {
     list-style-type: none;
-    margin: 0 2%;
+    padding: 2%;
 }
 /* link colors */
 a:visited {
@@ -260,9 +265,9 @@ a:hover {
         font-size: 1rem;
     }
 
-    header#main-header {
+    /* header#main-header {
         text-align: initial;
-    }
+    } */
 
     #mobile-heading {
         display: none;
